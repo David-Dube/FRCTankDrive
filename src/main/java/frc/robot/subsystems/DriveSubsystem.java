@@ -61,6 +61,14 @@ public class DriveSubsystem extends SubsystemBase {
     return h;
   }
 
+  public void set(double speed, double turn) {
+    m_drivetrain.arcadeDrive(speed, turn);
+  }
+
+  public void stop() {
+    set(0, 0);
+  }
+
   public void teleop(double speed, double turn) {
     m_drivetrain.arcadeDrive(speed, turn);
   }
